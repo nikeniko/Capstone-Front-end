@@ -1,0 +1,95 @@
+:root {
+  --primaryColor: #050505;
+  --secondaryColor: #dadada;
+  --textColor: #7c7c7c;
+  --greyColor: #343434;
+  --whiteColor: #ffffff;
+  --blackColor: #242424;
+}
+
+.testDrive {
+  padding-top: 8rem;
+}
+
+.secContainer {
+  padding: 8rem 1.5rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.testDriveText .testDriveTitle {
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 35px;
+}
+.testDriveText .testDriveDescription {
+  color: var(--textColor);
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.testDriveForm {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 14px;
+  color: var(--blackColor);
+  margin-bottom: 0.5rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--greyColor);
+  border-radius: 4px;
+  color: var(--blackColor);
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-weight: 600;
+  margin-top: 1rem;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--secondaryColor);
+  color: var(--blackColor);
+}
+
+@media screen and (min-width: 520px) {
+  .testDriveText .testDriveTitle {
+    font-size: 40px;
+  }
+  .testDriveText .testDriveDescription {
+    font-size: 20px;
+  }
+  .testDriveForm {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 996px) {
+  .testDriveText .testDriveTitle {
+    font-size: 50px;
+  }
+  .testDriveText .testDriveDescription {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=TestDrive.css.map */
