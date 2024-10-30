@@ -1,4 +1,3 @@
-/* src/styles.css */
 :root {
   --primaryColor: #050505;
   --secondaryColor: #dadada;
@@ -28,75 +27,91 @@
 }
 .auction .secContainer .carContainer {
   gap: 2rem;
-  display: grid; /* Use grid display here */
-  grid-template-columns: repeat(1, 1fr); /* Default to one column */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1rem;
 }
-.auction .secContainer .carContainer .singleCar {
+.auction .secContainer .carContainer .singleCarcard {
   transition: 0.3s ease-in-out;
   text-align: left;
   padding: 1rem;
   border-radius: 10px;
-  background: var(--whiteColor); /* Add background color for cards */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  background: var(--whiteColor);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.auction .secContainer .carContainer .singleCar .imgDiv {
-  height: 90%;
+.auction .secContainer .carContainer .singleCarcard .imgDiv {
+  height: 300px;
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
   border: 5px solid transparent;
+  position: relative;
 }
-.auction .secContainer .carContainer .singleCar .imgDiv .img {
-  height: 100%;
+.auction .secContainer .carContainer .singleCarcard .imgDiv .img {
+  height: 110%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
 }
-.auction .secContainer .carContainer .singleCar .carTitle {
+.auction .secContainer .carContainer .singleCarcard .carTitle {
   color: var(--blackColor);
-  font-size: 15px;
+  font-size: 16px;
   padding-top: 10px;
+  font-weight: bold;
 }
-.auction .secContainer .carContainer .singleCar .kilometri {
+.auction .secContainer .carContainer .singleCarcard .kilometri {
   color: var(--blackColor);
   opacity: 0.7;
   font-size: 14px;
 }
-.auction .secContainer .carContainer .singleCar .AWD {
+.auction .secContainer .carContainer .singleCarcard .AWD {
   padding: 1rem 0;
   color: var(--blackColor);
   font-weight: 600;
   font-size: 15px;
 }
-.auction .secContainer .carContainer .singleCar .price_buyBtn {
+.auction .secContainer .carContainer .singleCarcard .price_buyBtn {
   gap: 1rem;
 }
-.auction .secContainer .carContainer .singleCar .price_buyBtn span {
+.auction .secContainer .carContainer .singleCarcard .price_buyBtn span {
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 3px;
   font-weight: 600;
 }
-.auction .secContainer .carContainer .singleCar .price_buyBtn .price {
+.auction .secContainer .carContainer .singleCarcard .price_buyBtn .price {
   background: var(--secondaryColor);
-  color: var(--whiteColor);
+  color: var(--primaryColor);
+  margin-right: 2rem;
   cursor: pointer;
 }
-.auction .secContainer .carContainer .singleCar .price_buyBtn .price:hover {
+.auction .secContainer .carContainer .singleCarcard .price_buyBtn .price:hover {
   background: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+.auction .secContainer .carContainer .singleCarcard .price_buyBtn .buyBtn {
+  background: var(--primaryColor);
   color: var(--textColor);
 }
-.auction .secContainer .carContainer .singleCar .price_buyBtn .buyBtn {
+.auction .secContainer .carContainer .singleCarcard .price_buyBtn .buyBtn:hover {
   background: var(--greyColor);
-  color: var(--textColor);
+  color: var(--whiteColor);
 }
-.auction .secContainer .carContainer .singleCar:hover {
+.auction .secContainer .carContainer .singleCarcard:hover {
   transform: translateY(-7px);
   padding: 1rem;
   background: var(--secondaryColor);
 }
-.auction .secContainer .carContainer .singleCar:hover .price_buyBtn span {
+.auction .secContainer .carContainer .singleCarcard:hover .price_buyBtn span {
   border: 1px solid var(--primaryColor);
+}
+.auction .secContainer .carContainer .singleCarcard:hover .imgDiv .img {
+  transform: scale(1.1);
 }
 .auction .secContainer .carContainer .singleCarActive {
   padding: 1rem;
@@ -120,12 +135,12 @@
     font-size: 40px;
   }
   .auction .secContainer .carContainer {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
   .auction .secContainer .carContainer .singleCar .carTitle {
     font-size: 18px;
   }
-  .auction .secContainer .carContainer .singleCar .miles,
+  .auction .secContainer .carContainer .singleCar .kilometri,
   .auction .secContainer .carContainer .singleCar .AWD {
     font-size: 16px;
   }
@@ -141,6 +156,6 @@
     gap: 1rem;
   }
   .auction .secContainer .carContainer {
-    grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    grid-template-columns: repeat(3, 1fr);
   }
 }/*# sourceMappingURL=VehicleCard.css.map */

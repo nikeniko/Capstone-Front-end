@@ -156,6 +156,9 @@
   .header .logoDiv .logo {
     width: 150px;
   }
+  .header .navbar .menu {
+    padding-left: 7rem;
+  }
   .header .navbar .menu .listItem {
     margin: 0;
   }

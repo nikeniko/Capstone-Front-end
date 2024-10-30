@@ -17,7 +17,7 @@ const Search =() => {
   }, [])
   return (
     <div className="search">
-      <div className="secContainer container">
+      <div className=" container">
         <h3 data-aos="fade-up" className="title">
           Quale macchina vuoi vedere?
         </h3>

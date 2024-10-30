@@ -63,6 +63,7 @@
         .menu{
             display: flex;
             align-items: center;
+            
             flex-direction: column;
 
             .listItem{
@@ -213,6 +214,7 @@
     
     .navbar{
         .menu{
+            padding-left: 7rem;
             .listItem{
                 margin: 0 ;
             }

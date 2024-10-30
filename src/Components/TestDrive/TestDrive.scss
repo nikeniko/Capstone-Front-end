@@ -1,107 +1,154 @@
 :root {
-    --primaryColor: #050505;
-    --secondaryColor: #dadada;
-    --textColor: #7c7c7c;
-    --greyColor: #343434;
-    --whiteColor: #ffffff;
-    --blackColor: #242424;
+  --primaryColor: #050505;
+  --secondaryColor: #dadada;
+  --textColor: #7c7c7c;
+  --greyColor: #343434;
+  --whiteColor: #ffffff;
+  --blackColor: #242424;
+}
+
+.home {
+  font-size: 18px;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--primaryColor);
+
+  a{
+      font-size: 15px;
   }
-  
-  .testDrive {
-    padding-top: 8rem;
+  &:hover{
+      color: var(--greyColor);
+      transition: .3s ease;
   }
-  
-  .secContainer {
-    padding: 8rem 1.5rem;
-    text-align: center;
-    display: grid;
-    gap: 2rem;
+  &:hover a{
+      color: var(--whiteColor);
   }
-  
-  .testDriveText {
-    .testDriveTitle {
-      color: var(--blackColor);
-      font-weight: 700;
-      font-size: 35px;
-    }
-  
-    .testDriveDescription {
-      color: var(--textColor);
-      font-size: 18px;
-      margin-bottom: 2rem;
-    }
+}
+
+
+.secContainer {
+  padding: 8rem 1.5rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.testDriveText {
+  .testDriveTitle {
+    color: var(--blackColor);
+    font-weight: 700;
+    font-size: 35px;
+    transition: color 0.3s ease;
+
   }
-  
-  .testDriveForm {
-    display: grid;
-    gap: 1.5rem;
-    justify-content: center;
+
+  .testDriveDescription {
+    color: var(--textColor);
+    font-size: 18px;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.4s ease-out;
   }
-  
+}
+
+.testDriveForm {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  animation: fadeInUp 1.6s ease-out;
+
   .formGroup {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: all 0.3s ease;
   }
-  
-  label {
-    font-size: 14px;
-    color: var(--blackColor);
-    margin-bottom: 0.5rem;
+}
+
+label {
+  font-size: 14px;
+  color: var(--blackColor);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primaryColor);
   }
-  
-  input,
-  select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid var(--greyColor);
-    border-radius: 4px;
-    color: var(--blackColor);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--greyColor);
+  border-radius: 4px;
+  color: var(--blackColor);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+
+  &:focus {
+    border-color: var(--primaryColor);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
-  
-  button {
-    padding: 10px 15px;
-    border-radius: 3px;
-    font-weight: 600;
-    margin-top: 1rem;
-    background: var(--primaryColor);
-    color: var(--whiteColor);
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-weight: 600;
+  margin-top: 1rem;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
     background: var(--secondaryColor);
     color: var(--blackColor);
+    transform: scale(1.08);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   }
-  
-  @media screen and (min-width: 520px) {
-    .testDriveText {
-      .testDriveTitle {
-        font-size: 40px;
-      }
-  
-      .testDriveDescription {
-        font-size: 20px;
-      }
+}
+@media screen and (min-width: 520px) {
+  .testDriveText {
+    .testDriveTitle {
+      font-size: 40px;
     }
-  
-    .testDriveForm {
-      max-width: 500px;
-      margin: auto;
+
+    .testDriveDescription {
+      font-size: 20px;
     }
   }
-  
-  @media screen and (min-width: 996px) {
-    .testDriveText {
-      .testDriveTitle {
-        font-size: 50px;
-      }
-  
-      .testDriveDescription {
-        font-size: 24px;
-      }
+
+  .testDriveForm {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 996px) {
+  .testDriveText {
+    .testDriveTitle {
+      font-size: 50px;
+    }
+
+    .testDriveDescription {
+      font-size: 24px;
     }
   }
-  
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

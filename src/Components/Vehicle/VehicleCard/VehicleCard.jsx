@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './VehicleCard.css';
 
 const VehicleCard = ({ vehicle }) => {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ const VehicleCard = ({ vehicle }) => {
     };
 
     return (
-        <div className="singleCar">
+        <div className="singleCarcard">
             <div className="imgDiv">
                 <img className="img" src={vehicle.immagine} alt={`${vehicle.marca} ${vehicle.modello}`} />
             </div>

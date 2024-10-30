@@ -2,6 +2,8 @@ import React from "react";
 import "./Sellers.css"
 
 import sellerImage1 from "../../../Assets/logo1.png"
+import sellerImage2 from "../../../Assets/logo2.png"
+import sellerImage3 from "../../../Assets/logo3.png"
 
 const Sellers =() => {
   return (
@@ -11,7 +13,6 @@ const Sellers =() => {
           <h3 className="secTitle">
             Explore top sellers in town
           </h3>
-          <p>Gigi Pinoli</p>
         </div>
         <div className="sellersContainer grid">
           <div className="singleSeller flex">
@@ -27,16 +28,28 @@ const Sellers =() => {
           </div>
           <div className="singleSeller flex">
             <div className="imgDiv flex">
-              <img src={sellerImage1} alt="" className="img" />
+              <img src={sellerImage2} alt="" className="img" />
             </div>
             <span className="info">
               <h4 className="name">
-                Dodge
+                Ferrari
               </h4>
-              <p>from €40000</p>
+              <p>from €100000</p>
+            </span>
+          </div>
+          <div className="singleSeller flex">
+            <div className="imgDiv flex">
+              <img src={sellerImage3} alt="" className="img" />
+            </div>
+            <span className="info">
+              <h4 className="name">
+                Lamborghini
+              </h4>
+              <p>from €3000000</p>
             </span>
           </div>
         </div>
+
 
 
       </div>

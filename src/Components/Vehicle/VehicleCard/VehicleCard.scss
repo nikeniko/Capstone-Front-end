@@ -35,33 +35,41 @@
             gap: 2rem;
             display: grid; 
             grid-template-columns: repeat(1, 1fr);
+            padding: 1rem; 
 
-            .singleCar {
+            .singleCarcard {
                 transition: .3s ease-in-out;
                 text-align: left;
                 padding: 1rem;
                 border-radius: 10px;
                 background: var(--whiteColor); 
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+                height: 500px; 
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-between; 
+                
                 .imgDiv {
-                    height: 90%;
+                    height: 300px; 
                     width: 100%;
                     overflow: hidden;
                     border-radius: 10px;
                     border: 5px solid transparent;
-
+                    position: relative; 
+                    
                     .img {
-                        height: 100%;
+                        height: 110%;
                         width: 100%;
-                        object-fit: contain;
+                        object-fit: cover; 
+                        transition: transform 0.5s ease; 
                     }
                 }
 
                 .carTitle {
                     color: var(--blackColor);
-                    font-size: 15px;
+                    font-size: 16px;
                     padding-top: 10px;
+                    font-weight: bold; 
                 }
 
                 .kilometri {
@@ -89,18 +97,24 @@
 
                     .price {
                         background: var(--secondaryColor);
-                        color: var(--whiteColor);
+                        color: var(--primaryColor);
+                        margin-right: 2rem;
                         cursor: pointer;
 
                         &:hover {
                             background: var(--secondaryColor);
-                            color: var(--textColor);
+                            color: var(--primaryColor);
                         }
                     }
 
                     .buyBtn {
-                        background: var(--greyColor);
+                        background: var(--primaryColor);
                         color: var(--textColor);
+
+                        &:hover {
+                            background: var(--greyColor); 
+                            color: var(--whiteColor);
+                        }
                     }
                 }
 
@@ -113,6 +127,10 @@
                         span {
                             border: 1px solid var(--primaryColor);
                         }
+                    }
+
+                    .imgDiv .img {
+                        transform: scale(1.1); 
                     }
                 }
             }
@@ -156,7 +174,7 @@
                         font-size: 18px;
                     }
 
-                    .miles,
+                    .kilometri,
                     .AWD {
                         font-size: 16px;
                     }

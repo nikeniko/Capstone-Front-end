@@ -7,8 +7,22 @@
   --blackColor: #242424;
 }
 
-.testDrive {
-  padding-top: 8rem;
+.home {
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+.home a {
+  font-size: 15px;
+}
+.home:hover {
+  color: var(--greyColor);
+  transition: 0.3s ease;
+}
+.home:hover a {
+  color: var(--whiteColor);
 }
 
 .secContainer {
@@ -16,35 +30,43 @@
   text-align: center;
   display: grid;
   gap: 2rem;
+  animation: fadeInUp 1.2s ease-out;
 }
 
 .testDriveText .testDriveTitle {
   color: var(--blackColor);
   font-weight: 700;
   font-size: 35px;
+  transition: color 0.3s ease;
 }
 .testDriveText .testDriveDescription {
   color: var(--textColor);
   font-size: 18px;
   margin-bottom: 2rem;
+  animation: fadeInUp 1.4s ease-out;
 }
 
 .testDriveForm {
   display: grid;
   gap: 1.5rem;
   justify-content: center;
+  animation: fadeInUp 1.6s ease-out;
 }
-
-.formGroup {
+.testDriveForm .formGroup {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: all 0.3s ease;
 }
 
 label {
   font-size: 14px;
   color: var(--blackColor);
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+label:hover {
+  color: var(--primaryColor);
 }
 
 input,
@@ -55,6 +77,13 @@ select {
   border: 1px solid var(--greyColor);
   border-radius: 4px;
   color: var(--blackColor);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+input:focus,
+select:focus {
+  border-color: var(--primaryColor);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -65,12 +94,14 @@ button {
   background: var(--primaryColor);
   color: var(--whiteColor);
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 button:hover {
   background: var(--secondaryColor);
   color: var(--blackColor);
+  transform: scale(1.08);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 520px) {
@@ -91,5 +122,15 @@ button:hover {
   }
   .testDriveText .testDriveDescription {
     font-size: 24px;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=TestDrive.css.map */

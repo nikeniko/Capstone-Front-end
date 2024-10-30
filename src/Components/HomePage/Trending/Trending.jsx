@@ -28,7 +28,7 @@ const Trending =() => {
               Usato challenger 
             </h5>
             <span className="kilometri">
-              11354 kilometri
+              113054 kilometri
             </span>
             <span className="AWD">
 
@@ -47,17 +47,17 @@ const Trending =() => {
               <img src={car2} alt="Car Image" />
             </div>
             <h5 className="carTitle">
-              Usato challenger 
+              Usato mustang
             </h5>
             <span className="kilometri">
-              11354 kilometri
+              53849 kilometri
             </span>
             <span className="AWD">
 
             </span>
             <div className="price_seller flex">
               <span className="price">
-                €52,000
+                €42,000
               </span>
               <span className="seller">
                 Best seller
@@ -69,17 +69,17 @@ const Trending =() => {
               <img src={car3} alt="Car Image" />
             </div>
             <h5 className="carTitle">
-              Usato challenger 
+              Usato lotus
             </h5>
             <span className="kilometri">
-              11354 kilometri
+              30354 kilometri
             </span>
             <span className="AWD">
 
             </span>
             <div className="price_seller flex">
               <span className="price">
-                €52,000
+                €82,000
               </span>
               <span className="seller">
                 Best seller

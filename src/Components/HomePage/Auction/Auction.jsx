@@ -2,7 +2,9 @@ import React from "react";
 import "./Auction.css"
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 
-import car1 from "../../../Assets/car.png"
+import car4 from "../../../Assets/car4.png"
+import car5 from "../../../Assets/car5.png"
+import car6 from "../../../Assets/car6.png"
 
 const Auction =() => {
   return (
@@ -20,20 +22,20 @@ const Auction =() => {
         <div className="carContainer grid">
           <div className="singleCar grid">
             <div className="imgDiv">
-              <img src={car1} alt="Car Image" />
+              <img src={car4} alt="Car Image" />
             </div>
             <h5 className="carTitle">
-              Usato challenger 
+              Usato Cadillac Eldorado
             </h5>
             <span className="kilometri">
-              11354 kilometri
+              1354 kilometri
             </span>
             <span className="AWD">
 
             </span>
             <div className="price_buyBtn flex">
               <span className="price">
-                €52,000
+                €300,000
               </span>
               <span className="buyBtn">
                 Buy Now
@@ -42,20 +44,20 @@ const Auction =() => {
           </div>
           <div className="singleCar grid">
             <div className="imgDiv">
-              <img src={car1} alt="Car Image" />
+              <img src={car5} alt="Car Image" />
             </div>
             <h5 className="carTitle">
-              Usato challenger 
+              Usato Audi R7
             </h5>
             <span className="kilometri">
-              11354 kilometri
+              43354 kilometri
             </span>
             <span className="AWD">
 
             </span>
             <div className="price_buyBtn flex">
               <span className="price">
-                €52,000
+                €72,000
               </span>
               <span className="buyBtn">
                 Buy Now
@@ -64,10 +66,10 @@ const Auction =() => {
           </div>
           <div className="singleCar grid">
             <div className="imgDiv">
-              <img src={car1} alt="Car Image" />
+              <img src={car6} alt="Car Image" />
             </div>
             <h5 className="carTitle">
-              Usato challenger 
+              Usato Ferrari Spider
             </h5>
             <span className="kilometri">
               11354 kilometri
@@ -77,7 +79,7 @@ const Auction =() => {
             </span>
             <div className="price_buyBtn flex">
               <span className="price">
-                €52,000
+                €252,000
               </span>
               <span className="buyBtn">
                 Buy Now

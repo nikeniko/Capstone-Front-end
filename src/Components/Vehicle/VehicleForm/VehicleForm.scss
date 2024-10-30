@@ -1,37 +1,116 @@
+:root{
+  --primaryColor: #050505;
+  --secondaryColor: #dadada;
+  --textColor: #7c7c7c;
+  --greyColor: #343434;
+  --whiteColor: #ffffff;
+  --blackColor: #242424
+}
+.successMessage {
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #d4edda;
+  color: #155724;
+  font-size: 16px;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+  justify-content: center;
+  opacity: 1;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
 .vehicleForm {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #f3f3f3, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  animation: fadeIn 0.6s ease-in-out;
+  transition: transform 0.3s ease;
+}
+.vehicleFormTitle{
+  display: flex;
+  justify-content: center;
+  padding-top: 9rem;
+}
+
+
+.vehicleForm:hover {
+  transform: translateY(-5px);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+input,
+textarea,
+select {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #050505;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+button {
+  padding: 14px 22px;
+  background-color: #050505;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #dadada;
+  color: #050505;
+  transform: scale(1.08);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
   }
-  
-  .formGroup {
-    display: flex;
-    flex-direction: column;
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  label {
-    font-size: 14px;
-    margin-bottom: 0.5rem;
-  }
-  
-  input,
-  textarea {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    background-color: #050505;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #dadada;
-    color: #050505;
-  }
-  
+}

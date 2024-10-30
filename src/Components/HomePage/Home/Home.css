@@ -10,6 +10,9 @@
 .home {
   padding-top: 8rem;
 }
+.home h1 {
+  padding-top: 0rem;
+}
 
 .secContainer {
   padding: 8rem 1.5rem;

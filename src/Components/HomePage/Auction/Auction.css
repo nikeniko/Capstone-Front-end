@@ -7,6 +7,9 @@
   --blackColor: #242424 ;
 }
 
+.auction .secContainer {
+  padding: 0rem 1.5rem;
+}
 .auction .secContainer .secHeading {
   justify-content: space-between;
   padding: 1rem 0;
